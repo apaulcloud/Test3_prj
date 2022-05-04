@@ -1,27 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# IIQF - first Class by Dr. Hari
+# IIQF - IntelliJ
 # 
-
-# What is
-# - IID : Independent and identically distributed
-# - Git : Git is a DevOps tool used for source code management. It is a free and open-source version control system used to handle small to very large projects efficiently. Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.
-# - Git and Git desktop 
-# - install Anaconda
-# - complete Python recording
-# - Excel
-# - Explore Jupyter notebook
-# - Create Git account
-# - in GIT, create one repository
-# - Jupyter notebook 
-#   - markdown mode
-#   - write 10 lines from your resume and get it as a text
-#   
-# - install IntelliJ and create first package
-# 
-# 
-
 # - esc + a
 # - esc +b
 # - Shift + enter
@@ -29,27 +10,16 @@
 # - esc d
 # - esc + m
 # 
-
-# 
-
-# In[ ]:
-
-
 # first python program in IntelliJ Idea
 
 print("Amit is a professional with more than eighteen years of experience in " + "\n"
-                                                                                 "implementing financial markets and infrastructure projects")
+  "implementing financial markets and infrastructure projects")
 
 str1 = "hello ... 3rd line " + "starts "
-
-# In[ ]:
 
 print(str1.upper() + "\n")
 
 print(str1.title())
-
-# In[ ]:
-
 
 n1 = 23
 
@@ -66,43 +36,7 @@ print(n1)
 # 
 # - how to see plotted graph in IntelliJ
 
-# # homework, 1 week, Apr 30th
-# abhishek, nivththa, kayastha
-# Ajay, 
-# 
-# - 20-30 min recorded
-# - GUI git desktop, install it
-# - create github acc
-
-# # home work - everyone
-# 5 min
-# - Ajay, Abhishek kayastha
-# - read stock market data with pandas from csv
-# - read stock data from some website
-# 
-# -read data from website, yahoo finance
-# import pandas_datareader as web
-# #! pip install pandas_datareader
-# web.DataReader("HDFC.NS", data_source = "yahoo")
-# 
-# - nse 
-# - use web.DataReader("HDFC.NS",:"yhaoo ..")
-# web.DataReader("HDFC.NS", data_source = "yahoo")
-# iloc
-# df.head(10)
-# 
-# 
-# help (DataReader)
-# 
-
-# # home work one month
-# - Abhishek
-# - numpy - generate random numbers
-# - normal distribution
-# - uniform ddistribution
-# - add some image to explain what is normal Gausian dist
-# - what is the difference betwee normal an uniform dist ?
-# 
+#
 # import numberp as np
 # np.random.rand()
 
@@ -120,7 +54,6 @@ import pandas as pd
 print("imported pandas")
 # !pip install pandas
 
-
 # ! pip install pandas_datareader
 
 import matplotlib.pyplot as plt
@@ -136,7 +69,7 @@ print("hdfc.ns imported from yahoo")
 stk['Close'].plot()
 plt.show()
 
-print("hdfc plotted")
+print("1. hdfc plotted")
 
 from datetime import datetime
 
@@ -144,7 +77,7 @@ start = datetime(2022, 1, 1)
 
 end = datetime(2022, 3, 31)
 
-print("TD started")
+print("2. TD plotted")
 TD_DataFrame = web.DataReader('TD', 'yahoo', start, end)
 TD_DataFrame['Close'].plot()
 plt.show()
@@ -152,8 +85,6 @@ plt.show()
 print("exited plotting TD...going into candlestick")
 var = TD_DataFrame.columns
 print("printing columns"+var)
-
-
 
 # Define the ticker list
 # import pandas as pd
@@ -164,11 +95,12 @@ import yfinance as yf
 data = yf.download(tickers_list,'2015-1-1')['Adj Close']
 
 # Print first 5 rows of the data
+print("3. Head of multiple tickers")
 print(data.head())
 
 
 # conda info --envs
-print("candlestick start")
+print("4. Candlestick start")
 # df=
 #!pip install plotly.graph_objects
 import plotly.graph_objects as graph_obj
@@ -188,32 +120,10 @@ candle.show()
 
 data_csv.plot()
 
-# In[35]:
-
 
 data_csv.columns
 
-# In[28]:
-
-
-data_csv['Open'].plot()
-
-# In[29]:
-
-
 data_csv['Close'].plot()
-
-# In[37]:
-
-
 data_csv.info()
-
-# In[39]:
-
-
 data_csv.info
-
-# In[25]:
-
-
 data_csv.dtypes
