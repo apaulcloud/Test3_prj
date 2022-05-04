@@ -146,6 +146,8 @@ end = datetime(2022, 3, 31)
 
 
 TD_DataFrame = web.DataReader('TD', 'yahoo', start, end)
+TD_DataFrame['Close'].plot()
+plt.show()
 
 # Define the ticker list
 # import pandas as pd
@@ -156,7 +158,7 @@ import yfinance as yf
 data = yf.download(tickers_list,'2015-1-1')['Adj Close']
 
 # Print first 5 rows of the data
-# print(data.head())
+print(data.head())
 
 
 # conda info --envs
