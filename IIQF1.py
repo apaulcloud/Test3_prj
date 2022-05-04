@@ -144,10 +144,16 @@ start = datetime(2022, 1, 1)
 
 end = datetime(2022, 3, 31)
 
-
+print("TD started")
 TD_DataFrame = web.DataReader('TD', 'yahoo', start, end)
 TD_DataFrame['Close'].plot()
 plt.show()
+
+print("exited plotting TD...going into candlestick")
+var = TD_DataFrame.columns
+print("printing columns"+var)
+
+
 
 # Define the ticker list
 # import pandas as pd
@@ -162,13 +168,23 @@ print(data.head())
 
 
 # conda info --envs
+print("candlestick start")
+# df=
+#!pip install plotly.graph_objects
+import plotly.graph_objects as graph_obj
+
 
 data_csv = pd.read_csv('Data/AAPL.csv')
 
 data_csv.describe()
 
-# In[23]:
+candle = graph_obj.Figure(data=[graph_obj.Candlestick(x=data_csv['Date'],
+                                                      open=data_csv['Close'],
+                                                      high=data_csv['High'],
+                                                      low=data_csv['High'],
+                                                      close=data_csv['Close'])])
 
+candle.show()
 
 data_csv.plot()
 
