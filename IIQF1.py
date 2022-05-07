@@ -3,6 +3,7 @@
 
 # IIQF - IntelliJ
 # 
+# - Jupyter
 # - esc + a
 # - esc +b
 # - Shift + enter
@@ -12,13 +13,12 @@
 # 
 # first python program in IntelliJ Idea
 
-print("Amit is a professional with more than eighteen years of experience in " + "\n"
-  "implementing financial markets and infrastructure projects")
+print("IntelliJ line 1 " + "\n"
+  "Line 2")
 
 str1 = "hello ... 3rd line " + "starts "
 
 print(str1.upper() + "\n")
-
 print(str1.title())
 
 n1 = 23
@@ -26,18 +26,15 @@ n1 = 23
 print("n1 = ")
 print(n1)
 
-# # home work May 7th
-# basics of intellij
-# - check how get plugins for putho
-# - create python project
-# - share the link of recorded sesson
-# - create pme pythn projct with intellij
-# - take jupyter notebook codde and write to one .py file and create and run 
-# 
-# - how to see plotted graph in IntelliJ
+# homework May 7th
+# 1- basics of intellij
+# 2- check how get plugins for python
+# 3- create one python project with intellij
+# 4- take jupyter notebook code and write to one .py file and create and run
+# 5- how to see plotted graph in IntelliJ - from file and using external source
 
 #
-# import numberp as np
+# import numpy as np
 # np.random.rand()
 
 # # home work 5
@@ -62,6 +59,9 @@ import pandas_datareader.data as pd_data
 
 # !pip install yfinance
 
+# Single ticker from external source - start
+
+
 stk = web.DataReader("HDFC.NS", data_source="yahoo")
 print(stk)
 print("hdfc.ns imported from yahoo")
@@ -70,11 +70,12 @@ stk['Close'].plot()
 plt.show()
 
 print("1. hdfc plotted")
+# Single ticker from external source - end
 
+# Date range start
 from datetime import datetime
 
 start = datetime(2022, 1, 1)
-
 end = datetime(2022, 3, 31)
 
 print("2. TD plotted")
@@ -85,6 +86,7 @@ plt.show()
 print("exited plotting TD...going into candlestick")
 var = TD_DataFrame.columns
 print("printing columns"+var)
+# Date range end
 
 # Define the ticker list
 # import pandas as pd
@@ -105,7 +107,7 @@ print("4. Candlestick start")
 #!pip install plotly.graph_objects
 import plotly.graph_objects as graph_obj
 
-
+# 5.1 Plotted with source from a csv file
 data_csv = pd.read_csv('Data/AAPL.csv')
 
 data_csv.describe()
@@ -126,4 +128,4 @@ data_csv.columns
 data_csv['Close'].plot()
 data_csv.info()
 data_csv.info
-data_csv.dtypes
+data
